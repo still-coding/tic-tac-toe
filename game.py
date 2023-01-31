@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Game logic module."""
 
 from dataclasses import dataclass
