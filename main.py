@@ -108,9 +108,6 @@ def main():
                     player_select_success = game.player_move(player_pos)
                     if player_select_success:
                         game.turn_num += 1
-                    window.render_to_terminal(
-                        controls + get_board_image(game.board, player_select_success)
-                    )
                     if winner := game.we_have_a_winner():
                         window.render_to_terminal(
                             controls
@@ -125,11 +122,11 @@ def main():
                 if winner := game.we_have_a_winner():
                     window.render_to_terminal(
                         controls
-                        + get_board_image(game.board, player_select_success)
+                        + get_board_image(game.board)
                         + [bold(game_over_message(winner))]
                     )
                     break
-                window.render_to_terminal(controls + get_board_image(game.board))
+                window.render_to_terminal(controls + get_board_image(game.board, player_select_success))
 
             if winner:
                 for c in input_generator:
