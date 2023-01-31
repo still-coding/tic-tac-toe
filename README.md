@@ -2,5 +2,4 @@
 
 Usage:
 1. `pipenv install`
-2. `pipenv shell`
-3. `python3 main.py` or `./main.py`
+2. `pipenv run python3 main.py` or `pipenv run ./main.py`
